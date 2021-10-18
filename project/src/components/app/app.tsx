@@ -1,7 +1,13 @@
-import Main from '../main/main';
+import MainPage from '../main-page/main-page';
 
-function App(): JSX.Element {
-  return <Main />;
+type AppProps = {
+  title: string,
+  genre: string,
+  year: number
+}
+
+function App({title, genre, year}: AppProps): JSX.Element {
+  return <MainPage title = {title} genre = {genre} year = {year}/>;
 }
 
 export default App;
